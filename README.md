@@ -28,8 +28,16 @@ xmg66/openpanel3
 
 ![image](https://user-images.githubusercontent.com/55003092/202559414-69fd7979-cdf7-40ac-b628-7797a7b4dff9.png)
 
-访问home/python/panel/config/database.conf文件
+访问home/python/panel/config/database.conf文件，修改成自己新建的数据库信息，保存
 
-[![image]()](https://user-images.githubusercontent.com/55003092/202548258-b8efd278-c3df-484f-b6f9-14985742d139.png)
+![image](https://user-images.githubusercontent.com/55003092/202559925-3df10d9f-0341-41d7-8345-0182569edb65.png)
 
+重启容器
 
+![image](https://user-images.githubusercontent.com/55003092/202560205-4fdd2989-3cdf-4627-a300-e0c1de1cfed3.png)
+
+登录SSH，使用命令创建管理员账户密码
+```
+docker exec -it cdntip /bin/bash  # 进入容器
+python3 manage.py createsuperuser     # 创建管理员命令， 根据提示创建即可
+```
