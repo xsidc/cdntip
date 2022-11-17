@@ -4,12 +4,18 @@
 ```
 https://bt.sy/bbs/forum-37-1.html
 ```
-安装docker（请勿安装宝塔自带的Docker，存在问题，建议手动安装）
+安装Docker（请勿安装宝塔自带的Docker，存在问题，建议手动安装）
 ```
 bash <(curl https://get.docker.com)
 ```
+获取Docker网卡IP
+```
+ip addr
+```
+![image](https://user-images.githubusercontent.com/55003092/202549504-8d1677b3-f5b7-4f18-9d9d-8acfd7e409e7.png)
+
 安装Mysql5.6或Mysql5.7
-新建数据库
+新建数据库，填写获取到的Docket网卡IP
 
 ![image](https://user-images.githubusercontent.com/55003092/202548791-a1952113-9c2f-441a-acdc-9a69aea30013.png)
 
@@ -17,8 +23,18 @@ bash <(curl https://get.docker.com)
 ```
 docker run --name cloudpanel -d -it -p 8111:80 --restart=always cdntip/panel /bin/bash
 ```
+查看当前容器，并复制CONTAINER ID
+```
+docker ps -a
+```
+![image](https://user-images.githubusercontent.com/55003092/202549945-52c6bf37-680b-42ca-8761-2320e91fad72.png)
+查看容器内网IP
+```
+docker inspect 这里填写复制到的CONTAINER ID | grep IPAddress
+```
+![image](https://user-images.githubusercontent.com/55003092/202550288-ec5f3ed0-0d04-4bfe-ab7e-e1161439280e.png)
 
- 进入容器
+进入容器
 ```
 docker exec -it cdntip /bin/bash
 ```
