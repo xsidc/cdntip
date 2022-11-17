@@ -45,6 +45,7 @@ vi config/database.conf
 ![image](https://user-images.githubusercontent.com/55003092/202548258-b8efd278-c3df-484f-b6f9-14985742d139.png)
 
 给数据库设置访问权限，填写获取到的容器内网IP
+
 ![image](https://user-images.githubusercontent.com/55003092/202551212-5cea473a-9dff-46e5-b706-885c391a81ef.png)
 
 保存文件，Ctrl+D,退出容器，重启容器：
