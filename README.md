@@ -43,12 +43,10 @@ python3 manage.py createsuperuser # 创建管理员命令， 根据提示创建�
 ```
 全部完成！！！
 
-`登录页面
+# 登录页面
+
 ![image](https://user-images.githubusercontent.com/55003092/202560521-b430f027-d853-40cd-acd3-927103898884.png)
 
-`网站内页
+# 网站内页
+
 ![image](https://user-images.githubusercontent.com/55003092/202560768-e7731225-340d-40c6-bfa9-f76b9d367954.png)
-
-
-
-
