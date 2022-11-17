@@ -1,41 +1,48 @@
-# 个人自助云面板，支持Azure Aws Do、Linode等云厂商
+# 宝塔搭建个人自助云面板，支持Azure Aws Do、Linode等云厂商
 
- 安装docker
+ 安装最新宝塔
 ```
-curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh 
-```
-
- 如果docker没启动，可以运行这个
-```
-service docker start
-```
- docker创建网络
-```
-docker network create cdntip_network 
+https://bt.sy/bbs/forum-37-1.html
 ```
 
- 启动mysql容器 (更换mysqlroot密码后，机器内部也需要修改database.conf文件的密码)
-```mkdir /data 
-docker run -d -it --network cdntip_network -v /data/mysql:/var/lib/mysql --name panel_mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=panel mysql:5.7 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-```
+安装Mysql5.6或Mysql5.7
+创建数据库
 
- 启动 cloudpanel (8111端口可改为任意，此处为实际对外端口)
+登录SSH
+安装docker
 ```
-docker run -d -it --network cdntip_network -p 8111:80 --name panel tiktokmjj/openpanel 
+bash <(curl https://get.docker.com)
+```
+部署容器 (8111端口可改为任意，此处为实际对外端口)
+```
+docker run --name cloudpanel -d -it -p 8111:80 --restart=always cdntip/panel /bin/bash
 ```
 
  进入容器
 ```
-docker exec -it panel /bin/bash
+docker exec -it cdntip /bin/bash
 ```
+修改数据库信息
+```
+vi config/database.conf
+```
+保存文件，Ctrl+D,退出容器，重启容器：
+```
+docker restart cloudpanel
+```
+查看容器日志
+```
+docker logs -f cloudpanel
+```
+![image](https://user-images.githubusercontent.com/55003092/202546952-c037ef4b-3c89-4e92-b0d7-64f2ebfa49d2.png)
 
- 创建管理员
+创建管理员
 ```
-python manage.py createsuperuser --username 管理员账户 --email 管理员邮箱
-```
-示例：python manage.py createsuperuser --username admin --email 123456@qq.com
+docker exec -it cloudpanel /bin/bash #进入docker
+python3 manage.py createsuperuser    # 创建管理员命令， 根据提示创建即可
 
- 添加aws镜像
+
+添加aws镜像
 ```
 python manage.py aws_update_images
 ```
