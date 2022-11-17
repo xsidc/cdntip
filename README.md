@@ -41,6 +41,12 @@ xmg66/openpanel3
 docker exec -it cdntip /bin/bash  # 进入容器
 python3 manage.py createsuperuser # 创建管理员命令， 根据提示创建即可
 ```
+
+添加aws镜像
+```
+python manage.py aws_update_images
+```
+
 全部完成！！！
 
 # 登录页面
