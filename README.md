@@ -62,7 +62,7 @@ docker logs -f cloudpanel
 ```
 docker exec -it cloudpanel /bin/bash #进入docker
 python3 manage.py createsuperuser    # 创建管理员命令， 根据提示创建即可
-
+```
 
 添加aws镜像
 ```
