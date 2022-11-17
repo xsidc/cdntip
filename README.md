@@ -1,4 +1,4 @@
-# 这是一个用于管理各种云帐户的面板，如az aws do、linode
+# 个人自助云面板，支持Azure Aws Do、Linode等云厂商
 
  安装docker
 ```
