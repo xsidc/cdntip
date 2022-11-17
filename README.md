@@ -21,7 +21,7 @@ ip addr
 
 部署容器 (8111端口可改为任意，此处为实际对外端口)
 ```
-docker run --name cloudpanel -d -it -p 8111:80 --restart=always xmg66/openpanel3 /bin/bash
+docker run --name cdntip -d -it -p 8111:80 --restart=always xmg66/openpanel3 /bin/bash
 ```
 查看当前容器，并复制CONTAINER ID
 ```
