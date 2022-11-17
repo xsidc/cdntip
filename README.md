@@ -1,16 +1,15 @@
 # 这是一个用于管理各种云帐户的面板，如az aws do、linode
 
-# 安装docker
+ 安装docker
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh 
 ```
 
-# 如果docker没启动，可以运行这个
+ 如果docker没启动，可以运行这个
 ```
 service docker start
 ```
-
-# docker创建网络
+ docker创建网络
 ```
 docker network create cdntip_network 
 ```
