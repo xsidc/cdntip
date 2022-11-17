@@ -70,6 +70,7 @@ python manage.py aws_update_images
 ```
 
 # 其他功能
+
 停止当前容器 
 ```
 docker stop panel
