@@ -1,4 +1,4 @@
-这是一个用于管理各种云帐户的面板，如az aws do、linode
+# 这是一个用于管理各种云帐户的面板，如az aws do、linode
 
 安装docker
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh 
