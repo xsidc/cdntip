@@ -4,7 +4,7 @@
 ```
 https://bt.sy/bbs/forum-37-1.html
 ```
-安装Docker（请勿安装宝塔自带的Docker，存在问题，建议手动安装）
+安装Docker（可使用宝塔自带的Docker，建议给2核2G配额）
 ```
 bash <(curl https://get.docker.com)
 ```
@@ -60,7 +60,7 @@ docker logs -f cloudpanel
 
 创建管理员
 ```
-docker exec -it cloudpanel /bin/bash #进入docker
+docker exec -it cdntip /bin/bash #进入docker
 python3 manage.py createsuperuser    # 创建管理员命令， 根据提示创建即可
 ```
 
