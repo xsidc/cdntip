@@ -10,6 +10,7 @@ bash <(curl https://get.docker.com)
 ```
 安装Mysql5.6或Mysql5.7
 新建数据库
+
 ![image](https://user-images.githubusercontent.com/55003092/202548791-a1952113-9c2f-441a-acdc-9a69aea30013.png)
 
 部署容器 (8111端口可改为任意，此处为实际对外端口)
