@@ -17,7 +17,7 @@ xmg66/openpanel3
 
 ![image](https://user-images.githubusercontent.com/55003092/202558280-837750a2-cdde-4a9f-a602-913efbf2f5bf.png)
 
-安装Mysql5.6 或 Mysql5.7
+安装Mysql5.7，不支持Mysql5.6
 新建数据库，给数据库设置指定IP访问，填写容器的IP
 
 ![image](https://user-images.githubusercontent.com/55003092/202558581-3549f8a6-0ad1-4b38-8570-7e9b4f24ca75.png)
