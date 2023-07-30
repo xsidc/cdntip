@@ -30,6 +30,8 @@ xmg66/openpanel3
 
 访问home/python/panel/config/database.conf文件，修改成自己新建的数据库信息，保存
 
+host填写网卡IP：172.17.0.1
+
 ![image](https://user-images.githubusercontent.com/55003092/202559925-3df10d9f-0341-41d7-8345-0182569edb65.png)
 
 重启容器
