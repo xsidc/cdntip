@@ -49,6 +49,17 @@ python3 manage.py createsuperuser # 创建管理员命令， 根据提示创建�
 python manage.py aws_update_images
 ```
 
+给Linode添加日本新地区
+```
+Linode目录下打开models.py文件
+找到regions_choices = (
+将('ap-northeast', '日本'),
+修改
+('ap-northeast', '日本东京'),
+('jp-osa', '日本大版'),
+```
+
+
 全部完成！！！
 
 # 登录页面
