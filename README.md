@@ -51,7 +51,7 @@ python manage.py aws_update_images
 
 给Linode添加日本新地区
 ```
-Linode目录下打开models.py文件
+home/python/panel/apps/linode目录下打开models.py文件
 找到regions_choices = (
 将('ap-northeast', '日本'),
 修改
