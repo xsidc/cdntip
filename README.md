@@ -58,6 +58,11 @@ home/python/panel/apps/linode目录下打开models.py文件
 ('ap-northeast', '日本东京'),
 ('jp-osa', '日本大版'),
 ```
+给do添加地区 修改镜像 配置
+```
+home/python/panel/libs目录下打开do.py文件
+
+```
 
 
 全部完成！！！
